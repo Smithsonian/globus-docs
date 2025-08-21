@@ -1,7 +1,5 @@
 # Creating Guest Collections for External Collaboration
 
-## Executive Summary
-
 This guide provides step-by-step instructions for Smithsonian researchers to create **Guest Collections** in Globus, enabling secure data sharing with external collaborators who don't have access to Smithsonian storage systems. Guest Collections act as a bridge, using the data owner's credentials to provide controlled access to specific directories.
 
 ### Smithsonian Globus Infrastructure
