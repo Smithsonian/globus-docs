@@ -188,3 +188,55 @@
   max-width: 900px;
   margin: 0 auto;
 }
+
+/* Four cards per row on desktop */
+@media (min-width: 900px) {
+  .md-typeset .grid.cards > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Smaller card padding for 4-column layout */
+.md-typeset .grid.cards > ul > li {
+  padding: 1rem;
+}
+
+.md-typeset table:not([class]) {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  display: inline-table;
+  min-width: 50%;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--odi-dark-green);
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border: none;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-bottom: 1px solid #eee;
+}
+
+.md-typeset table:not([class]) tr:last-child td {
+  border-bottom: none;
+}
+
+.md-typeset table:not([class]) tbody tr:hover {
+  background-color: rgba(8, 162, 121, 0.05);
+}
+
+/* Zebra striping */
+.md-typeset table:not([class]) tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.md-typeset table:not([class]) tbody tr:nth-child(even):hover {
+  background-color: rgba(8, 162, 121, 0.08);
+}
