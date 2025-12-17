@@ -4,6 +4,7 @@ site_url: https://smithsonian.github.io/globus-docs/
 
 theme:
   name: material
+  logo: images/odi-logo.svg
   palette:
     - scheme: default
       primary: custom
@@ -29,7 +30,6 @@ theme:
     - content.code.copy
   icon:
     repo: fontawesome/brands/github
-    logo: images/odi-logo.svg
 
 nav:
   - Home: index.md
@@ -63,7 +63,7 @@ plugins:
 extra:
   generator: false
 
-copyright: "&copy; Smithsonian Institution"
+copyright: '<a href="https://www.si.edu">Smithsonian Institution</a> · <a href="https://www.si.edu/privacy">Privacy</a> · <a href="https://www.si.edu/termsofuse">Terms of Use</a>'
 
 extra_css:
   - stylesheets/extra.css
