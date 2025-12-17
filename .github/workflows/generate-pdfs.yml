@@ -26,9 +26,9 @@ jobs:
           sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-latex-extra fonts-dejavu
       
       - name: Create output directory
-        run: mkdir -p pdfs
+        run: mkdir -p pdfs tmp
       
-      - name: Generate PDFs
+      - name: Generate individual PDFs
         run: |
           for file in README.md guide1-globus-basics.md guide2-sharing-data.md guide3-globus-connect-personal.md guide4-advanced-features.md; do
             if [ -f "$file" ]; then
@@ -51,6 +51,53 @@ jobs:
               echo "Generated $output_name"
             fi
           done
+      
+      - name: Generate combined PDF
+        run: |
+          # Define file order
+          files=(
+            "README.md"
+            "guide1-globus-basics.md"
+            "guide2-sharing-data.md"
+            "guide3-globus-connect-personal.md"
+            "guide4-advanced-features.md"
+          )
+          
+          # Convert HTML img tags and add page breaks between documents
+          first=true
+          for file in "${files[@]}"; do
+            if [ -f "$file" ]; then
+              if [ "$first" = true ]; then
+                first=false
+              else
+                # Add page break before each subsequent document
+                echo -e '\n\\newpage\n'
+              fi
+              # Convert HTML img tags to Markdown syntax
+              sed -E 's/<img src="([^"]+)"[^>]*>/![](\1)/g' "$file"
+            fi
+          done > tmp/combined.md
+          
+          # Generate single PDF from combined markdown
+          pandoc tmp/combined.md \
+            -o "pdfs/globus-complete-guide.pdf" \
+            --pdf-engine=xelatex \
+            -V geometry:margin=1in \
+            -V mainfont="DejaVu Sans" \
+            -V sansfont="DejaVu Sans" \
+            -V monofont="DejaVu Sans Mono" \
+            -V colorlinks=true \
+            -V linkcolor=blue \
+            -V urlcolor=blue \
+            --resource-path=.:images \
+            --toc \
+            --toc-depth=2 \
+            -V toc-title="Table of Contents"
+          
+          echo "Generated globus-complete-guide.pdf"
+      
+      - name: Cleanup
+        run: rm -rf tmp
       
       - name: Commit PDFs to repository
         run: |
