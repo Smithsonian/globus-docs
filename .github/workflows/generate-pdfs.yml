@@ -7,7 +7,7 @@ on:
     paths:
       - '*.md'
       - 'images/**'
-  workflow_dispatch:  # Allows manual trigger from GitHub UI
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -33,7 +33,10 @@ jobs:
           for file in README.md guide1-globus-basics.md guide2-sharing-data.md guide3-globus-connect-personal.md guide4-advanced-features.md; do
             if [ -f "$file" ]; then
               output_name=$(basename "$file" .md).pdf
-              pandoc "$file" \
+              
+              # Convert HTML img tags to Markdown syntax, then pipe to pandoc
+              sed -E 's/<img src="([^"]+)"[^>]*>/![](\1)/g' "$file" | \
+              pandoc \
                 -o "pdfs/$output_name" \
                 --pdf-engine=xelatex \
                 -V geometry:margin=1in \
@@ -44,6 +47,7 @@ jobs:
                 -V linkcolor=blue \
                 -V urlcolor=blue \
                 --resource-path=.:images
+              
               echo "Generated $output_name"
             fi
           done
