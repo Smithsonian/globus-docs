@@ -1,0 +1,51 @@
+name: Generate PDFs from Markdown
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '*.md'
+      - 'images/**'
+  workflow_dispatch:  # Allows manual trigger from GitHub UI
+
+jobs:
+  build-pdfs:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Install Pandoc and LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended texlive-latex-extra
+      
+      - name: Create output directory
+        run: mkdir -p pdf-output
+      
+      - name: Generate PDFs
+        run: |
+          for file in README.md guide1-globus-basics.md guide2-sharing-data.md guide3-globus-connect-personal.md guide4-advanced-features.md; do
+            if [ -f "$file" ]; then
+              output_name=$(basename "$file" .md).pdf
+              pandoc "$file" \
+                -o "pdfs/$output_name" \
+                --pdf-engine=pdflatex \
+                -V geometry:margin=1in \
+                -V colorlinks=true \
+                -V linkcolor=blue \
+                -V urlcolor=blue \
+                --resource-path=.:images
+              echo "Generated $output_name"
+            fi
+          done
+      
+      - name: Commit PDFs to repository
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add pdfs/*.pdf
+          git diff --staged --quiet || git commit -m "Auto-generate PDFs from Markdown [skip ci]"
+          git push
