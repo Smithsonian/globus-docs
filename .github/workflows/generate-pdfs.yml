@@ -5,8 +5,7 @@ on:
     branches:
       - main
     paths:
-      - '*.md'
-      - 'images/**'
+      - 'docs/**'
   workflow_dispatch:
 
 permissions:
@@ -30,14 +29,15 @@ jobs:
       
       - name: Generate individual PDFs
         run: |
-          for file in README.md guide1-globus-basics.md guide2-sharing-data.md guide3-globus-connect-personal.md guide4-advanced-features.md; do
+          cd docs
+          for file in guide1-globus-basics.md guide2-sharing-data.md guide3-globus-connect-personal.md guide4-advanced-features.md; do
             if [ -f "$file" ]; then
               output_name=$(basename "$file" .md).pdf
               
               # Convert HTML img tags to Markdown syntax, then pipe to pandoc
               sed -E 's/<img src="([^"]+)"[^>]*>/![](\1)/g' "$file" | \
               pandoc \
-                -o "pdfs/$output_name" \
+                -o "../pdfs/$output_name" \
                 --pdf-engine=xelatex \
                 -V geometry:margin=1in \
                 -V mainfont="DejaVu Sans" \
@@ -54,33 +54,28 @@ jobs:
       
       - name: Generate combined PDF
         run: |
-          # Define file order
+          cd docs
           files=(
-            "README.md"
             "guide1-globus-basics.md"
             "guide2-sharing-data.md"
             "guide3-globus-connect-personal.md"
             "guide4-advanced-features.md"
           )
           
-          # Convert HTML img tags and add page breaks between documents
           first=true
           for file in "${files[@]}"; do
             if [ -f "$file" ]; then
               if [ "$first" = true ]; then
                 first=false
               else
-                # Add page break before each subsequent document
                 echo -e '\n\\newpage\n'
               fi
-              # Convert HTML img tags to Markdown syntax
               sed -E 's/<img src="([^"]+)"[^>]*>/![](\1)/g' "$file"
             fi
-          done > tmp/combined.md
+          done > ../tmp/combined.md
           
-          # Generate single PDF from combined markdown
-          pandoc tmp/combined.md \
-            -o "pdfs/globus-complete-guide.pdf" \
+          pandoc ../tmp/combined.md \
+            -o "../pdfs/globus-complete-guide.pdf" \
             --pdf-engine=xelatex \
             -V geometry:margin=1in \
             -V mainfont="DejaVu Sans" \
