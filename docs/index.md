@@ -6,94 +6,69 @@ hide:
 
 # Globus at the Smithsonian
 
-**All Smithsonian staff can log into Globus right now at [app.globus.org](https://app.globus.org) using their network credentials — no registration, VPN, or special setup required.**
+<p class="subtitle">Secure, high-performance data transfers for Smithsonian staff</p>
+
+Globus is a high-performance data transfer platform that enables Smithsonian staff to move large datasets between storage systems and share data with external collaborators. Whether you're transferring terabytes of genomic data, archival video collections, high-resolution imagery, or field research files, Globus handles it reliably, even if you close your laptop or your connection drops mid-transfer.
+
+[Log in to Globus :material-arrow-right:](https://app.globus.org){ .md-button .md-button--primary }
 
 ---
 
-## What is Globus?
-
-Globus is a secure, high-performance data transfer platform that enables Smithsonian staff to move large datasets between storage systems and share data with external collaborators. Transfers happen server-to-server, so you can start a transfer and close your laptop.
-
-**Smithsonian infrastructure includes:**
-
-| Location | Purpose |
-|----------|---------|
-| Smithsonian Data Center | Hydra (HPC), DAMS NAS, unit network drives |
-| STRI | Tropical research data workflows |
-| SAO | Astrophysical research data |
-
----
-
-## Guides
+## Choose Your Guide
 
 <div class="grid cards" markdown>
 
--   **Guide 1: Globus Basics**
+-   :material-book-open-variant:{ .lg .middle } **Guide 1: Globus Basics**
 
     ---
 
-    Start here if you're new. Learn to log in, navigate the interface, transfer files, and monitor progress.
+    New to Globus? Start here. Learn to log in, navigate, and transfer files.
 
-    [Read the basics :material-arrow-right:](guide1-globus-basics.md)
+    [:octicons-arrow-right-24: Get started](guide1-globus-basics.md)
 
--   **Guide 2: Sharing Data**
-
-    ---
-
-    Share with external collaborators. Create Guest Collections that give partners controlled access.
-
-    [Learn to share :material-arrow-right:](guide2-sharing-data.md)
-
--   **Guide 3: Globus Connect Personal**
+-   :material-share-variant:{ .lg .middle } **Guide 2: Sharing Data**
 
     ---
 
-    Transfer from your laptop or external drive to institutional storage.
+    Share files with external collaborators using Guest Collections.
 
-    [Set up your device :material-arrow-right:](guide3-globus-connect-personal.md)
+    [:octicons-arrow-right-24: Learn to share](guide2-sharing-data.md)
 
--   **Guide 4: Advanced Features**
+-   :material-laptop:{ .lg .middle } **Guide 3: Globus Connect Personal**
 
     ---
 
-    Automate workflows with Sync, scheduled transfers, and Globus Flows.
+    Transfer files from your laptop or external drive to Smithsonian storage.
 
-    [Explore advanced features :material-arrow-right:](guide4-advanced-features.md)
+    [:octicons-arrow-right-24: Set up your device](guide3-globus-connect-personal.md)
+
+-   :material-cog-sync:{ .lg .middle } **Guide 4: Advanced Features**
+
+    ---
+
+    Automate transfers with Sync, Timers, and Flows.
+
+    [:octicons-arrow-right-24: Explore advanced](guide4-advanced-features.md)
 
 </div>
 
 ---
 
-## Quick Start
-
-```mermaid
-flowchart LR
-    A[What do you need?] --> B{Data location?}
-    B -->|On SI storage| C[Guide 1]
-    B -->|On laptop/drive| D[Guide 3]
-    A --> E{Sharing externally?}
-    E -->|Yes| F[Guide 2]
-    A --> G{Automating?}
-    G -->|Yes| H[Guide 4]
-```
-
----
-
-## Get Access
+## Need Storage Access?
 
 | Storage System | Contact |
 |----------------|---------|
-| Hydra (HPC) | [SI Service Portal](https://smithsonianprod.servicenowservices.com/si?id=sc_cat_item&sys_id=962e05331b96e05078932f41f54bcb3b) |
-| DAMS NAS Staging | SI-Globus@si.edu |
-| STRI | STRIhelp@si.edu |
+| **Hydra** (HPC) | [Request via SI Service Portal](https://smithsonianprod.servicenowservices.com/si?id=sc_cat_item&sys_id=962e05331b96e05078932f41f54bcb3b) |
+| **DAMS NAS** | SI-Globus@si.edu |
+| **STRI** | STRIhelp@si.edu |
 
 ---
 
-## Support
+## Get Help
 
-**General Globus questions:** SI-Globus@si.edu
+Questions? Contact **SI-Globus@si.edu**
 
-[Download Complete Guide (PDF)](https://github.com/YOUR-USERNAME/YOUR-REPO/raw/main/pdfs/globus-complete-guide.pdf){ .md-button }
+[Download Complete Guide (PDF)](https://github.com/Smithsonian/globus-docs/raw/main/pdfs/globus-complete-guide.pdf){ .md-button }
 
 ---
 
