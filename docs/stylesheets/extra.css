@@ -1,0 +1,161 @@
+/* ODI Brand Colors */
+:root {
+  /* Primary Colors */
+  --odi-dark-green: #03523E;
+  --odi-light-green: #08A279;
+  --odi-light-blue: #80CCCD;
+  --odi-dark-blue: #00869F;
+  
+  /* Accent Colors */
+  --odi-red: #EA4924;
+  --odi-orange: #F08343;
+  --odi-yellow: #F8AD40;
+  --odi-purple: #76345B;
+  
+  /* Apply to Material theme */
+  --md-primary-fg-color: #03523E;
+  --md-primary-fg-color--light: #08A279;
+  --md-primary-fg-color--dark: #022b20;
+  --md-accent-fg-color: #00869F;
+  --md-typeset-a-color: #03523E;
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #08A279;
+  --md-accent-fg-color: #80CCCD;
+  --md-typeset-a-color: #80CCCD;
+}
+
+/* Header styling */
+.md-header {
+  background-color: var(--odi-dark-green);
+}
+
+/* Navigation tabs */
+.md-tabs {
+  background-color: var(--odi-dark-green);
+}
+
+/* Links */
+.md-typeset a {
+  color: var(--odi-dark-green);
+}
+
+.md-typeset a:hover {
+  color: var(--odi-light-green);
+}
+
+/* Buttons */
+.md-typeset .md-button {
+  background-color: var(--odi-dark-green);
+  border-color: var(--odi-dark-green);
+  color: white;
+}
+
+.md-typeset .md-button:hover {
+  background-color: var(--odi-light-green);
+  border-color: var(--odi-light-green);
+}
+
+.md-typeset .md-button--primary {
+  background-color: var(--odi-dark-green);
+  border-color: var(--odi-dark-green);
+}
+
+/* Card grid styling */
+.md-typeset .grid.cards > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.md-typeset .grid.cards > ul > li {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--odi-light-green);
+  box-shadow: 0 4px 12px rgba(3, 82, 62, 0.1);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li {
+  background: var(--md-default-bg-color);
+  border-color: var(--md-default-fg-color--lightest);
+}
+
+/* Admonitions with ODI colors */
+.md-typeset .admonition.note,
+.md-typeset details.note {
+  border-color: var(--odi-dark-blue);
+}
+
+.md-typeset .note > .admonition-title,
+.md-typeset .note > summary {
+  background-color: rgba(0, 134, 159, 0.1);
+}
+
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-color: var(--odi-light-green);
+}
+
+.md-typeset .tip > .admonition-title,
+.md-typeset .tip > summary {
+  background-color: rgba(8, 162, 121, 0.1);
+}
+
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+  border-color: var(--odi-orange);
+}
+
+.md-typeset .warning > .admonition-title,
+.md-typeset .warning > summary {
+  background-color: rgba(240, 131, 67, 0.1);
+}
+
+/* Table styling */
+.md-typeset table:not([class]) th {
+  background-color: var(--odi-dark-green);
+  color: white;
+}
+
+/* Footer */
+.md-footer {
+  background-color: var(--odi-dark-green);
+}
+
+/* Search highlight */
+.md-search__input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Code blocks */
+.md-typeset code {
+  background-color: rgba(128, 204, 205, 0.15);
+  color: var(--odi-dark-green);
+}
+
+/* Horizontal rules */
+.md-typeset hr {
+  border-color: var(--odi-light-blue);
+}
+
+/* Icon colors in cards */
+.md-typeset .grid.cards .twemoji,
+.md-typeset .grid.cards .emojione,
+.md-typeset .grid.cards svg {
+  color: var(--odi-dark-green);
+}
+
+/* Mermaid diagram styling */
+.mermaid {
+  background: transparent;
+}
