@@ -1,121 +1,109 @@
 ---
 hide:
   - navigation
+  - toc
 ---
+
+<div class="hero" markdown>
 
 # Globus at the Smithsonian
 
-<p class="subtitle">Secure, high-performance data transfers for Smithsonian staff</p>
+**Secure, high-performance data transfers for research**
 
-Globus is a data transfer platform that enables Smithsonian staff to move large datasets between storage systems and share data with external collaborators. Whether you're transferring terabytes of genomic data, archival video, high-resolution imagery, or field research files, Globus handles it reliably — even if you close your laptop mid-transfer.
+Globus is a data transfer platform that enables Smithsonian staff to move large datasets between storage systems and share data with external collaborators. Whether you're transferring terabytes of genomic data, archival video, high-resolution imagery, or field research files, Globus handles it reliably — even if you close your laptop mid-transfer. 
 
-[Log in to Globus :material-arrow-right:](https://app.globus.org){ .md-button .md-button--primary }
+[Log in to Globus :material-open-in-new:](https://app.globus.org){ .md-button .md-button--primary }
 
----
+</div>
 
 ## Choose Your Guide
 
 <div class="grid cards" markdown>
 
--   :material-book-open-variant:{ .lg .middle } **Guide 1: Globus Basics**
+-   :material-book-open-variant:{ .lg .middle } **Globus Basics**
 
     ---
 
-    New to Globus? Start here. Log in, navigate, and transfer files.
+    New to Globus? Start here.
 
-    [:octicons-arrow-right-24: Get started](guide1-globus-basics.md)
+    [:octicons-arrow-right-24: Guide 1](guide1-globus-basics.md)
 
--   :material-share-variant:{ .lg .middle } **Guide 2: Sharing Data**
-
-    ---
-
-    Share files with external collaborators using Guest Collections.
-
-    [:octicons-arrow-right-24: Learn to share](guide2-sharing-data.md)
-
--   :material-laptop:{ .lg .middle } **Guide 3: Connect Personal**
+-   :material-share-variant:{ .lg .middle } **Sharing Data**
 
     ---
 
-    Transfer from your laptop or external drive to SI storage.
+    Share with external collaborators.
 
-    [:octicons-arrow-right-24: Set up your device](guide3-globus-connect-personal.md)
+    [:octicons-arrow-right-24: Guide 2](guide2-sharing-data.md)
 
--   :material-cog-sync:{ .lg .middle } **Guide 4: Advanced**
+-   :material-laptop:{ .lg .middle } **Globus Connect Personal**
 
     ---
 
-    Automate with Sync, Timers, and Flows.
+    Transfer Data from your laptop.
 
-    [:octicons-arrow-right-24: Explore advanced](guide4-advanced-features.md)
+    [:octicons-arrow-right-24: Guide 3](guide3-globus-connect-personal.md)
+
+-   :material-cog-sync:{ .lg .middle } **Advanced Features**
+
+    ---
+
+    Automate with Sync & Flows.
+
+    [:octicons-arrow-right-24: Guide 4](guide4-advanced-features.md)
 
 </div>
 
 ---
 
-## Quick Decision Tree
-```
-What are you trying to do?
-│
-├── Transfer files between Smithsonian storage systems
-│   └── Guide 1: Globus Basics
-│
-├── Get files FROM my laptop/drive TO Smithsonian storage
-│   └── Guide 3: Globus Connect Personal → then Guide 1
-│
-├── Share files with someone outside Smithsonian
-│   ├── Data already on SI storage? → Guide 2
-│   └── Data on your laptop? → Guide 3 first, then Guide 2
-│
-└── Automate or schedule recurring transfers
-    └── Guide 4: Advanced Globus Features
-```
+## Quick Reference
 
----
+<div class="table-grid" markdown>
 
-## Access & Subscription
+<div markdown>
 
-**Smithsonian is an institutional subscriber to Globus.** All features are available to all staff.
+### Get Storage Access
 
-| Access Level | What You Get | Requirements |
-|--------------|--------------|--------------|
-| **Globus Web App** | Log in, browse, transfer, all features | Smithsonian network credentials |
-| **SI Storage** | Hydra, DAMS, STRI servers, etc. | SI credentials + account on that system |
-
-### Need Storage Access?
-
-| Storage System | Contact |
-|----------------|---------|
-| Hydra (HPC) | [Request via SI Service Portal](https://smithsonianprod.servicenowservices.com/si?id=sc_cat_item&sys_id=962e05331b96e05078932f41f54bcb3b) |
+| System | Contact |
+|--------|---------|
+| Hydra (HPC) | [SI Service Portal](https://smithsonianprod.servicenowservices.com/si?id=sc_cat_item&sys_id=962e05331b96e05078932f41f54bcb3b) |
 | DAMS NAS | SI-Globus@si.edu |
 | STRI | STRIhelp@si.edu |
 
----
+</div>
 
-## Quick Links
+<div markdown>
 
-| Resource | Link |
-|----------|------|
+### Quick Links
+
+| Resource | |
+|----------|--|
 | Globus Web App | [app.globus.org](https://app.globus.org) |
-| Globus Connect Personal | [globus.org/globus-connect-personal](https://www.globus.org/globus-connect-personal) |
+| Connect Personal | [Download](https://www.globus.org/globus-connect-personal) |
 | Official Docs | [docs.globus.org](https://docs.globus.org) |
 
----
+</div>
 
-## Get Help
-
-Questions? Contact **SI-Globus@si.edu**
-
-| Contact | For |
-|---------|-----|
-| SI-Globus@si.edu | General Globus support |
-| SI-HPC@si.edu | Hydra system support |
-| STRIhelp@si.edu | STRI accounts and support |
-
-[Download Complete Guide (PDF)](https://github.com/Smithsonian/globus-docs/raw/main/pdfs/globus-complete-guide.pdf){ .md-button }
+</div>
 
 ---
 
-<p style="text-align: center; color: #666; font-size: 0.9rem;">
-Maintained by ODI's Chief Data and AI Office
+## Need Help?
+
+<div style="text-align: center; padding: 1.5rem 0;" markdown>
+
+**General Support:** SI-Globus@si.edu · **Hydra:** SI-HPC@si.edu · **STRI:** STRIhelp@si.edu
+
+</div>
+
+<div class="button-row" markdown>
+
+[Download Complete Guide (PDF)](pdfs/globus-complete-guide.pdf){ .md-button }
+
+</div>
+
+---
+
+<p style="text-align: center; color: #888; font-size: 0.85rem;">
+Maintained by the Office of Digital and Innovation · Smithsonian Institution
 </p>
