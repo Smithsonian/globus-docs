@@ -1,5 +1,5 @@
 /* ===========================================
-  Colors
+   ODI Brand Colors
    =========================================== */
 :root {
   /* Primary Colors */
@@ -109,19 +109,22 @@
 
 .md-typeset .grid.cards > ul > li:hover {
   border-color: var(--odi-light-green);
-  box-shadow: 0 4px 12px rgba(0, 134, 159, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 134, 159, 0.15);
   transform: translateY(-2px);
 }
 
-/* Make entire card clickable */
-.md-typeset .grid.cards > ul > li > p:last-child a {
+/* Make entire card clickable via stretched link */
+.md-typeset .grid.cards > ul > li a {
   position: static;
 }
 
-.md-typeset .grid.cards > ul > li > p:last-child a::after {
+.md-typeset .grid.cards > ul > li > p:last-of-type a::after {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 1;
 }
 
@@ -165,7 +168,7 @@
 }
 
 /* ===========================================
-   Admonitions with Colors
+   Admonitions with ODI Colors
    =========================================== */
 .md-typeset .admonition.note,
 .md-typeset details.note {
@@ -334,14 +337,18 @@
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  text-align: left;
 }
 
-.hero-subtitle {
-  text-align: center;
-  font-weight: 600;
-  font-size: 1.1rem;
+.hero p.hero-subtitle {
+  text-align: center !important;
+  font-weight: 700 !important;
+  font-size: 1.15rem;
   margin-bottom: 1rem;
+  color: #333;
+}
+
+.hero p.hero-description {
+  text-align: left !important;
 }
 
 /* Hero buttons side by side, centered */
@@ -376,7 +383,7 @@
 }
 
 /* ===========================================
-   Quick Reference Section
+   Quick Reference Section (NEW)
    =========================================== */
 .quick-ref-grid {
   display: grid;
@@ -424,7 +431,7 @@
 }
 
 /* ===========================================
-    Misc Layout Adjustments
+   Legacy Layout Classes (kept for compatibility)
    =========================================== */
 /* Two-column layout for tables */
 .table-grid {

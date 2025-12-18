@@ -10,7 +10,7 @@ hide:
 
 <p class="hero-subtitle">Secure, high-performance data transfers for research</p>
 
-Globus is a data transfer platform that enables Smithsonian staff to move large datasets between storage systems and share data with external collaborators. Whether you're transferring terabytes of genomic data, archival video, high-resolution imagery, or field research files, Globus handles it reliably — even if you close your laptop mid-transfer. Explore the resources below to get started with Globus at the Smithsonian.
+<p class="hero-description">Globus is a data transfer platform that enables Smithsonian staff to move large datasets between storage systems and share data with external collaborators. Whether you're transferring terabytes of genomic data, archival video, high-resolution imagery, or field research files, Globus handles it reliably — even if you close your laptop mid-transfer. Explore the resources below to get started with Globus at the Smithsonian.</p>
 
 <div class="hero-buttons" markdown>
 
@@ -67,7 +67,7 @@ Globus is a data transfer platform that enables Smithsonian staff to move large 
 
 Request access to Smithsonian storage systems:
 
-- **Hydra (HPC):** [Submit an account request](https://smithsonianprod.servicenowservices.com/si?id=sc_cat_item&sys_id=962e05331b96e05078932f41f54bcb3b)
+- **Hydra (HPC):** [Submit a request via SI Service Portal](https://smithsonianprod.servicenowservices.com/si?id=sc_cat_item&sys_id=962e05331b96e05078932f41f54bcb3b)
 - **DAMS NAS:** Email SI-Globus@si.edu
 - **STRI:** Email STRIhelp@si.edu
 
