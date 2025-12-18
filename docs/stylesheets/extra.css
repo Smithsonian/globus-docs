@@ -1,5 +1,5 @@
 /* ===========================================
-   ODI Brand Colors
+   Colors
    =========================================== */
 :root {
   /* Primary Colors */
@@ -168,7 +168,7 @@
 }
 
 /* ===========================================
-   Admonitions with ODI Colors
+   Admonitions with Colors
    =========================================== */
 .md-typeset .admonition.note,
 .md-typeset details.note {
@@ -351,6 +351,11 @@
   text-align: left !important;
 }
 
+.hero p.hero-cta {
+  text-align: center !important;
+  margin-top: 1.5rem;
+}
+
 /* Hero buttons side by side, centered */
 .hero-buttons {
   display: flex;
@@ -383,7 +388,7 @@
 }
 
 /* ===========================================
-   Quick Reference Section (NEW)
+   Quick Reference Section
    =========================================== */
 .quick-ref-grid {
   display: grid;
@@ -431,7 +436,7 @@
 }
 
 /* ===========================================
-   Legacy Layout Classes (kept for compatibility)
+    Table Grid
    =========================================== */
 /* Two-column layout for tables */
 .table-grid {
