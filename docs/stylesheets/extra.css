@@ -351,21 +351,26 @@
   text-align: left !important;
 }
 
-.hero p.hero-cta {
-  text-align: left !important;
-  margin-top: 1.5rem;
+.hero p.hero-description,
+.hero p.hero-cta,
+.hero .hero-toc {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  text-align: left !important;
+}
+
+.hero p.hero-cta {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .hero-toc {
-  max-width: 1000px;
-  margin: 1rem auto 1.5rem auto;
-  text-align: left;
+  padding-left: 1.25rem;
   font-size: 0.95rem;
   color: #444;
-  padding-left: 1.25rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero-toc li {
@@ -405,7 +410,7 @@
 }
 
 /* ===========================================
-   Quick Reference Section 
+   Quick Reference Section (NEW)
    =========================================== */
 .quick-ref-grid {
   display: grid;

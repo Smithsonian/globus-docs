@@ -8,7 +8,7 @@ hide:
 
 # Globus at the Smithsonian
 
-<p class="hero-subtitle">Secure, high-performance data transfers for research</p>
+<p class="hero-subtitle">Secure, high-performance data transfers and automation</p>
 
 <p class="hero-description">Globus is a data transfer platform that enables Smithsonian staff to move large datasets between storage systems and share data with external collaborators. Whether you're transferring terabytes of genomic data, archival video, high-resolution imagery, or field research files, Globus handles it reliably — even if you close your laptop mid-transfer.</p>
 
