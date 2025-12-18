@@ -8,7 +8,7 @@ hide:
 
 # Globus at the Smithsonian
 
-**Secure, high-performance data transfers for research**
+<p class="hero-subtitle">Secure, high-performance data transfers for research</p>
 
 Globus is a data transfer platform that enables Smithsonian staff to move large datasets between storage systems and share data with external collaborators. Whether you're transferring terabytes of genomic data, archival video, high-resolution imagery, or field research files, Globus handles it reliably — even if you close your laptop mid-transfer. Explore the resources below to get started with Globus at the Smithsonian.
 
@@ -27,7 +27,7 @@ Globus is a data transfer platform that enables Smithsonian staff to move large 
 
     New to Globus? Start here.
 
-    [:octicons-arrow-right-24: Guide 1](guide1-globus-basics.md)
+    [:octicons-arrow-right-24: Get started](guide1-globus-basics.md)
 
 -   :material-share-variant:{ .lg .middle } **Sharing**
 
@@ -35,7 +35,7 @@ Globus is a data transfer platform that enables Smithsonian staff to move large 
 
     Share with external collaborators.
 
-    [:octicons-arrow-right-24: Guide 2](guide2-sharing-data.md)
+    [:octicons-arrow-right-24: Learn more](guide2-sharing-data.md)
 
 -   :material-laptop:{ .lg .middle } **Personal**
 
@@ -43,7 +43,7 @@ Globus is a data transfer platform that enables Smithsonian staff to move large 
 
     Transfer data from your laptop.
 
-    [:octicons-arrow-right-24: Guide 3](guide3-globus-connect-personal.md)
+    [:octicons-arrow-right-24: Set up](guide3-globus-connect-personal.md)
 
 -   :material-cog-sync:{ .lg .middle } **Advanced**
 
@@ -51,7 +51,7 @@ Globus is a data transfer platform that enables Smithsonian staff to move large 
 
     Automate with Sync & Flows.
 
-    [:octicons-arrow-right-24: Guide 4](guide4-advanced-features.md)
+    [:octicons-arrow-right-24: Explore](guide4-advanced-features.md)
 
 </div>
 
@@ -64,6 +64,8 @@ Globus is a data transfer platform that enables Smithsonian staff to move large 
 <div class="quick-ref-box" markdown>
 
 ### Get Storage Access
+
+Request access to Smithsonian storage systems:
 
 - **Hydra (HPC):** [Submit an account request](https://smithsonianprod.servicenowservices.com/si?id=sc_cat_item&sys_id=962e05331b96e05078932f41f54bcb3b)
 - **DAMS NAS:** Email SI-Globus@si.edu
@@ -91,6 +93,6 @@ Globus is a data transfer platform that enables Smithsonian staff to move large 
 
 ---
 
-<p style="text-align: center; color: #888; font-size: 0.85rem;">
+<p style="text-align: center; color: #888; font-size: 0.85rem; margin-bottom: 3rem;">
 Maintained by the Office of Digital and Innovation · Smithsonian Institution
 </p>

@@ -103,11 +103,26 @@
   transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
+  position: relative;
+  cursor: pointer;
 }
 
 .md-typeset .grid.cards > ul > li:hover {
   border-color: var(--odi-light-green);
   box-shadow: 0 4px 12px rgba(0, 134, 159, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Make entire card clickable */
+.md-typeset .grid.cards > ul > li > p:last-child a {
+  position: static;
+}
+
+.md-typeset .grid.cards > ul > li > p:last-child a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 
 [data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li {
@@ -319,6 +334,14 @@
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  text-align: left;
+}
+
+.hero-subtitle {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
 
 /* Hero buttons side by side, centered */
@@ -353,7 +376,7 @@
 }
 
 /* ===========================================
-   Quick Reference Section 
+   Quick Reference Section
    =========================================== */
 .quick-ref-grid {
   display: grid;
