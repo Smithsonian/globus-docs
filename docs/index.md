@@ -10,7 +10,7 @@ hide:
 
 **Secure, high-performance data transfers for research**
 
-Globus is a data transfer platform that enables Smithsonian staff to move large datasets between storage systems and share data with external collaborators. Whether you're transferring terabytes of genomic data, archival video, high-resolution imagery, or field research files, Globus handles it reliably — even if you close your laptop mid-transfer.
+Globus is a data transfer platform that enables Smithsonian staff to move large datasets between storage systems and share data with external collaborators. Whether you're transferring terabytes of genomic data, archival video, high-resolution imagery, or field research files, Globus handles it reliably — even if you close your laptop mid-transfer. Explore the resources below to get started with Globus at the Smithsonian.
 
 <div class="hero-buttons" markdown>
 
@@ -18,14 +18,6 @@ Globus is a data transfer platform that enables Smithsonian staff to move large 
 [Download Complete Guide (PDF)](pdfs/globus-complete-guide.pdf){ .md-button }
 
 </div>
-
-</div>
-
-## About This Site
-
-This documentation provides step-by-step guides for using Globus at the Smithsonian Institution. Whether you're new to Globus or looking to set up advanced automated workflows, start with the guide that matches your goal.
-
-## Choose Your Guide
 
 <div class="grid cards" markdown>
 
@@ -63,6 +55,8 @@ This documentation provides step-by-step guides for using Globus at the Smithson
 
 </div>
 
+</div>
+
 ## Quick Reference
 
 <div class="quick-ref-grid" markdown>
@@ -70,8 +64,6 @@ This documentation provides step-by-step guides for using Globus at the Smithson
 <div class="quick-ref-box" markdown>
 
 ### Get Storage Access
-
-Request access to Smithsonian storage systems:
 
 - **Hydra (HPC):** [Submit an account request](https://smithsonianprod.servicenowservices.com/si?id=sc_cat_item&sys_id=962e05331b96e05078932f41f54bcb3b)
 - **DAMS NAS:** Email SI-Globus@si.edu
@@ -92,6 +84,7 @@ Request access to Smithsonian storage systems:
 </div>
 
 ## Need Help?
+
 <p style="text-align: center;" markdown>
 **General Support:** SI-Globus@si.edu · **Hydra:** SI-HPC@si.edu · **STRI:** STRIhelp@si.edu
 </p>

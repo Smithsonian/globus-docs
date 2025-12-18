@@ -327,12 +327,25 @@
   gap: 1.5rem;
   flex-wrap: wrap;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   justify-content: center;
 }
 
 .hero-buttons .md-button {
   min-width: 200px;
   text-align: center;
+}
+
+/* Cards inside hero */
+.hero .grid.cards {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.hero .grid.cards > ul > li {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: left;
 }
 
 [data-md-color-scheme="slate"] .hero {
