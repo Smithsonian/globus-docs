@@ -15,10 +15,10 @@ hide:
 <p class="hero-cta"><strong>Explore the documentation below to get started with Globus at the Smithsonian.</strong></p>
 
 <ol class="hero-toc">
-  <li><strong>Basics</strong> — Log in, navigate the interface, transfer files</li>
-  <li><strong>Sharing</strong> — Create Guest Collections for external collaborators</li>
-  <li><strong>Personal</strong> — Install Globus Connect Personal on your laptop or workstation</li>
-  <li><strong>Advanced</strong> — Schedule transfers, set up automated workflows</li>
+  <li><strong>Basics</strong> — Learn how Globus works. Log in, navigate the interface, transfer files</li>
+  <li><strong>Sharing</strong> — Share your data. Create Guest Collections for external collaborators</li>
+  <li><strong>Personal</strong> — Move data from your desk. Install Globus Connect Personal on your laptop or workstation</li>
+  <li><strong>Advanced</strong> — Leverage all the features. Schedule transfers, set up automated workflows</li>
 </ol>
 
 <div class="hero-buttons" markdown>
