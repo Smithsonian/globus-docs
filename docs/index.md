@@ -21,13 +21,6 @@ hide:
   <li><strong>Advanced</strong> — Leverage all the features. Schedule transfers, set up automated workflows</li>
 </ol>
 
-<div class="hero-buttons" markdown>
-
-[Log in to Globus :material-open-in-new:](https://app.globus.org){ .md-button .md-button--primary }
-[Download Complete Guide (PDF)](pdfs/globus-complete-guide.pdf){ .md-button }
-
-</div>
-
 <div class="grid cards" markdown>
 
 -   :material-book-open-variant:{ .lg .middle } **Basics**
@@ -61,6 +54,13 @@ hide:
     Automate with Sync & Flows.
 
     [:octicons-arrow-right-24: Explore](guide4-advanced-features.md)
+
+</div>
+
+<div class="hero-buttons" markdown>
+
+[Log in to Globus :material-open-in-new:](https://app.globus.org){ .md-button .md-button--primary }
+[Download Complete Guide (PDF)](pdfs/globus-complete-guide.pdf){ .md-button }
 
 </div>
 

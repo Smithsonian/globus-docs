@@ -353,7 +353,7 @@
 
 .hero p.hero-description,
 .hero p.hero-cta,
-.hero .hero-toc {
+.hero ol.hero-toc {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
@@ -365,16 +365,16 @@
   margin-bottom: 0.5rem;
 }
 
-.hero-toc {
+.hero ol.hero-toc {
   padding-left: 0;
+  list-style-position: inside;
   font-size: 0.95rem;
   color: #444;
   margin-top: 0.75rem;
   margin-bottom: 1.5rem;
-  list-style-position: inside;
 }
 
-.hero-toc li {
+.hero ol.hero-toc li {
   margin-bottom: 0.1rem;
   line-height: 1.4;
 }
@@ -411,7 +411,7 @@
 }
 
 /* ===========================================
-   Quick Reference Section (NEW)
+   Quick Reference Section
    =========================================== */
 .quick-ref-grid {
   display: grid;
