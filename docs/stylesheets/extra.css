@@ -1,5 +1,5 @@
 /* ===========================================
-   Theme Colors
+   Colors
    =========================================== */
 :root {
   /* Primary Colors */
@@ -101,16 +101,32 @@
   padding: 1rem;
   background: white;
   transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .md-typeset .grid.cards > ul > li:hover {
   border-color: var(--odi-light-green);
-  box-shadow: 0 4px 12px rgba(3, 82, 62, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 134, 159, 0.1);
 }
 
 [data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li {
   background: var(--md-default-bg-color);
   border-color: var(--md-default-fg-color--lightest);
+}
+
+/* Card header - icon and title alignment */
+.md-typeset .grid.cards > ul > li > p:first-child {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 2.5rem;
+  margin-bottom: 0;
+}
+
+.md-typeset .grid.cards > ul > li > p:first-child .twemoji,
+.md-typeset .grid.cards > ul > li > p:first-child svg {
+  flex-shrink: 0;
 }
 
 /* Four cards per row on desktop */
@@ -134,7 +150,7 @@
 }
 
 /* ===========================================
-   Colors
+   Admonitions with Colors
    =========================================== */
 .md-typeset .admonition.note,
 .md-typeset details.note {
@@ -372,7 +388,7 @@
 }
 
 /* ===========================================
-   Miscellaneous Layout Adjustments
+    Misc Layout Adjustments
    =========================================== */
 /* Two-column layout for tables */
 .table-grid {

@@ -29,7 +29,7 @@ This documentation provides step-by-step guides for using Globus at the Smithson
 
 <div class="grid cards" markdown>
 
--   :material-book-open-variant:{ .lg .middle } **Globus Basics**
+-   :material-book-open-variant:{ .lg .middle } **Basics**
 
     ---
 
@@ -37,7 +37,7 @@ This documentation provides step-by-step guides for using Globus at the Smithson
 
     [:octicons-arrow-right-24: Guide 1](guide1-globus-basics.md)
 
--   :material-share-variant:{ .lg .middle } **Sharing Data**
+-   :material-share-variant:{ .lg .middle } **Sharing**
 
     ---
 
@@ -45,7 +45,7 @@ This documentation provides step-by-step guides for using Globus at the Smithson
 
     [:octicons-arrow-right-24: Guide 2](guide2-sharing-data.md)
 
--   :material-laptop:{ .lg .middle } **Globus Connect Personal**
+-   :material-laptop:{ .lg .middle } **Personal**
 
     ---
 
@@ -53,7 +53,7 @@ This documentation provides step-by-step guides for using Globus at the Smithson
 
     [:octicons-arrow-right-24: Guide 3](guide3-globus-connect-personal.md)
 
--   :material-cog-sync:{ .lg .middle } **Advanced Features**
+-   :material-cog-sync:{ .lg .middle } **Advanced**
 
     ---
 
