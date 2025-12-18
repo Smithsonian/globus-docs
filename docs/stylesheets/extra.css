@@ -1,5 +1,5 @@
 /* ===========================================
-   Colors
+   Theme Colors
    =========================================== */
 :root {
   /* Primary Colors */
@@ -15,11 +15,11 @@
   --odi-purple: #76345B;
   
   /* Apply to Material theme */
-  --md-primary-fg-color: #03523E;
-  --md-primary-fg-color--light: #08A279;
-  --md-primary-fg-color--dark: #022b20;
-  --md-accent-fg-color: #00869F;
-  --md-typeset-a-color: #03523E;
+  --md-primary-fg-color: #00869F;
+  --md-primary-fg-color--light: #80CCCD;
+  --md-primary-fg-color--dark: #006577;
+  --md-accent-fg-color: #08A279;
+  --md-typeset-a-color: #00869F;
 }
 
 /* Dark mode adjustments */
@@ -33,7 +33,7 @@
    Header & Navigation
    =========================================== */
 .md-header {
-  background-color: var(--odi-dark-green);
+  background-color: var(--odi-dark-blue);
 }
 
 .md-header__button.md-logo {
@@ -46,14 +46,14 @@
 }
 
 .md-tabs {
-  background-color: var(--odi-dark-green);
+  background-color: var(--odi-dark-blue);
 }
 
 /* ===========================================
    Links
    =========================================== */
 .md-typeset a {
-  color: var(--odi-dark-green);
+  color: var(--odi-dark-blue);
 }
 
 .md-typeset a:hover {
@@ -64,8 +64,8 @@
    Buttons
    =========================================== */
 .md-typeset .md-button {
-  background-color: var(--odi-dark-green);
-  border-color: var(--odi-dark-green);
+  background-color: var(--odi-dark-blue);
+  border-color: var(--odi-dark-blue);
   color: white;
   border-radius: 8px;
   padding: 0.75rem 1.5rem;
@@ -80,8 +80,8 @@
 }
 
 .md-typeset .md-button--primary {
-  background-color: var(--odi-dark-green);
-  border-color: var(--odi-dark-green);
+  background-color: var(--odi-dark-blue);
+  border-color: var(--odi-dark-blue);
 }
 
 /* ===========================================
@@ -124,17 +124,17 @@
 .md-typeset .grid.cards .twemoji,
 .md-typeset .grid.cards .emojione,
 .md-typeset .grid.cards svg {
-  color: var(--odi-dark-green);
+  color: var(--odi-dark-blue);
 }
 
 /* Larger icons in cards */
 .md-typeset .grid.cards .lg {
   font-size: 2rem;
-  color: var(--odi-dark-green);
+  color: var(--odi-dark-blue);
 }
 
 /* ===========================================
-    ODI Colors
+   Colors
    =========================================== */
 .md-typeset .admonition.note,
 .md-typeset details.note {
@@ -180,7 +180,7 @@
 }
 
 .md-typeset table:not([class]) th {
-  background-color: var(--odi-dark-green);
+  background-color: var(--odi-dark-blue);
   color: white;
   font-weight: 500;
   padding: 0.75rem 1rem;
@@ -214,7 +214,7 @@
    Footer
    =========================================== */
 .md-footer {
-  background-color: var(--odi-dark-green);
+  background-color: var(--odi-dark-blue);
 }
 
 /* ===========================================
@@ -229,7 +229,7 @@
    =========================================== */
 .md-typeset code {
   background-color: rgba(128, 204, 205, 0.15);
-  color: var(--odi-dark-green);
+  color: var(--odi-dark-blue);
 }
 
 /* ===========================================
@@ -286,28 +286,41 @@
    Hero Section
    =========================================== */
 .hero {
-  background: linear-gradient(135deg, #f8faf9 0%, #e8f4f0 100%);
+  background: linear-gradient(135deg, #f0f9fa 0%, #e4f3f5 100%);
   border-radius: 12px;
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   margin-bottom: 1.5rem;
-  border-left: 4px solid var(--odi-dark-green);
+  border-left: 4px solid var(--odi-dark-blue);
+  text-align: center;
 }
 
 .hero h1 {
   margin-top: 0;
-  color: var(--odi-dark-green);
+  color: var(--odi-dark-blue);
 }
 
-/* Hero buttons side by side */
+.hero p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero buttons side by side, centered */
 .hero-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.hero-buttons .md-button {
+  min-width: 200px;
+  text-align: center;
 }
 
 [data-md-color-scheme="slate"] .hero {
-  background: linear-gradient(135deg, #1e1e1e 0%, #2d3a36 100%);
+  background: linear-gradient(135deg, #1e1e1e 0%, #1e2d30 100%);
 }
 
 /* ===========================================
@@ -318,19 +331,21 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
   margin: 1rem 0;
+  align-items: start;
 }
 
 .quick-ref-box {
-  background: #f8faf9;
+  background: #f0f9fa;
   border-radius: 8px;
   padding: 1.25rem 1.5rem;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #d0e8eb;
+  height: 100%;
 }
 
 .quick-ref-box h3 {
   margin-top: 0;
   font-size: 1rem;
-  color: var(--odi-dark-green);
+  color: var(--odi-dark-blue);
   border-bottom: none;
   padding-bottom: 0;
 }
@@ -356,3 +371,21 @@
   border-color: var(--md-default-fg-color--lightest);
 }
 
+/* ===========================================
+   Miscellaneous Layout Adjustments
+   =========================================== */
+/* Two-column layout for tables */
+.table-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Footer buttons centered */
+.button-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
