@@ -73,7 +73,7 @@ This documentation provides step-by-step guides for using Globus at the Smithson
 
 Request access to Smithsonian storage systems:
 
-- **Hydra (HPC):** [Submit a request via SI Service Portal](https://smithsonianprod.servicenowservices.com/si?id=sc_cat_item&sys_id=962e05331b96e05078932f41f54bcb3b)
+- **Hydra (HPC):** [Submit an account request](https://smithsonianprod.servicenowservices.com/si?id=sc_cat_item&sys_id=962e05331b96e05078932f41f54bcb3b)
 - **DAMS NAS:** Email SI-Globus@si.edu
 - **STRI:** Email STRIhelp@si.edu
 
@@ -92,8 +92,9 @@ Request access to Smithsonian storage systems:
 </div>
 
 ## Need Help?
-
+<p style="text-align: center;" markdown>
 **General Support:** SI-Globus@si.edu · **Hydra:** SI-HPC@si.edu · **STRI:** STRIhelp@si.edu
+</p>
 
 ---
 
