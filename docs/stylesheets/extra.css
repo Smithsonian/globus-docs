@@ -168,7 +168,7 @@
 }
 
 /* ===========================================
-   Admonitions with Colors
+   Admonitions Colors
    =========================================== */
 .md-typeset .admonition.note,
 .md-typeset details.note {
@@ -356,6 +356,19 @@
   margin-top: 1.5rem;
 }
 
+.hero-toc {
+  max-width: 550px;
+  margin: 1.5rem auto;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #444;
+  padding-left: 1.5rem;
+}
+
+.hero-toc li {
+  margin-bottom: 0.4rem;
+}
+
 /* Hero buttons side by side, centered */
 .hero-buttons {
   display: flex;
@@ -388,7 +401,7 @@
 }
 
 /* ===========================================
-   Quick Reference Section
+   Quick Reference Section 
    =========================================== */
 .quick-ref-grid {
   display: grid;
@@ -436,7 +449,7 @@
 }
 
 /* ===========================================
-    Table Grid
+    Table Grid and Button Row
    =========================================== */
 /* Two-column layout for tables */
 .table-grid {

@@ -41,6 +41,8 @@ nav:
   - Advanced Features: guide4-advanced-features.md
 
 markdown_extensions:
+  - toc:
+      toc_depth: 2
   - admonition
   - pymdownx.details
   - pymdownx.superfences:

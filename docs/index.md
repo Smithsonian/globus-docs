@@ -14,6 +14,13 @@ hide:
 
 <p class="hero-cta"><strong>Explore the documentation below to get started with Globus at the Smithsonian.</strong></p>
 
+<ol class="hero-toc">
+  <li><strong>Basics</strong> — Log in, navigate the interface, transfer files</li>
+  <li><strong>Sharing</strong> — Create Guest Collections for external collaborators</li>
+  <li><strong>Personal</strong> — Install Globus Connect Personal on your laptop or workstation</li>
+  <li><strong>Advanced</strong> — Schedule transfers, set up automated workflows</li>
+</ol>
+
 <div class="hero-buttons" markdown>
 
 [Log in to Globus :material-open-in-new:](https://app.globus.org){ .md-button .md-button--primary }
@@ -66,8 +73,6 @@ hide:
 <div class="quick-ref-box" markdown>
 
 ### Get Storage Access
-
-Request access to Smithsonian storage systems:
 
 - **Hydra (HPC):** [Submit an account request](https://smithsonianprod.servicenowservices.com/si?id=sc_cat_item&sys_id=962e05331b96e05078932f41f54bcb3b)
 - **DAMS NAS:** Email SI-Globus@si.edu
