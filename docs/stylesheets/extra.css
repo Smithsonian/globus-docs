@@ -1,5 +1,5 @@
 /* ===========================================
-   Colors
+  Colors
    =========================================== */
 :root {
   /* Primary Colors */
@@ -130,7 +130,7 @@
 }
 
 /* Four cards per row on desktop */
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .md-typeset .grid.cards > ul {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -282,9 +282,9 @@
 /* ===========================================
    Page Layout
    =========================================== */
-/* Center the home page content */
+/* Center the content with reasonable max-width */
 .md-content__inner {
-  max-width: 1150px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -313,6 +313,12 @@
 .hero h1 {
   margin-top: 0;
   color: var(--odi-dark-blue);
+}
+
+.hero p {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Hero buttons side by side, centered */
