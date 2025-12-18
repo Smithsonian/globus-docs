@@ -1,5 +1,5 @@
 /* ===========================================
-   Colors
+   ODI Brand Colors
    =========================================== */
 :root {
   /* Primary Colors */
@@ -168,7 +168,7 @@
 }
 
 /* ===========================================
-   Admonitions Colors
+   Admonitions with ODI Colors
    =========================================== */
 .md-typeset .admonition.note,
 .md-typeset details.note {
@@ -352,21 +352,25 @@
 }
 
 .hero p.hero-cta {
-  text-align: center !important;
+  text-align: left !important;
   margin-top: 1.5rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-toc {
-  max-width: 550px;
-  margin: 1.5rem auto;
+  max-width: 1000px;
+  margin: 1rem auto 1.5rem auto;
   text-align: left;
   font-size: 0.95rem;
   color: #444;
-  padding-left: 1.5rem;
+  padding-left: 1.25rem;
 }
 
 .hero-toc li {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.1rem;
+  line-height: 1.4;
 }
 
 /* Hero buttons side by side, centered */
@@ -449,7 +453,7 @@
 }
 
 /* ===========================================
-    Table Grid and Button Row
+   Legacy Layout Classes (kept for compatibility)
    =========================================== */
 /* Two-column layout for tables */
 .table-grid {
