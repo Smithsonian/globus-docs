@@ -21,7 +21,7 @@ jobs:
       - name: Update date in README
         run: |
           TODAY=$(date +'%m/%d/%y')
-          sed -i "s/Last updated: [0-9]\{2\}\/[0-9]\{2\}\/[0-9]\{2\}/Last updated: $TODAY/" README.md
+          sed -i "s|Last updated: [0-9]\{2\}/[0-9]\{2\}/[0-9]\{2\}|Last updated: $TODAY|" README.md
       
       - name: Commit changes
         run: |
