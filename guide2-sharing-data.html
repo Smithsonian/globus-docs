@@ -1,0 +1,956 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for using Globus at the Smithsonian Institution">
+      
+      
+      
+        <link rel="canonical" href="https://smithsonian.github.io/globus-docs/guide2-sharing-data.html">
+      
+      
+        <link rel="prev" href="guide1-globus-basics.html">
+      
+      
+        <link rel="next" href="guide3-globus-connect-personal.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Sharing Data - Globus at the Smithsonian</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#creating-guest-collections-for-external-collaboration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Globus at the Smithsonian" class="md-header__button md-logo" aria-label="Globus at the Smithsonian" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Globus at the Smithsonian
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sharing Data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Smithsonian/globus-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Smithsonian/globus-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Globus at the Smithsonian" class="md-nav__button md-logo" aria-label="Globus at the Smithsonian" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Globus at the Smithsonian
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Smithsonian/globus-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Smithsonian/globus-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guide1-globus-basics.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sharing Data
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="guide2-sharing-data.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sharing Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#globus-access-and-account-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Globus Access and Account Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-your-guest-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Your Guest Collection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-ongoing-collaborations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing Ongoing Collaborations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-sharing-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Sharing Issues
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collaboration-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collaboration Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-your-collaborators-accessing-shared-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Your Collaborators: Accessing Shared Data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-and-additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support and Additional Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guide3-globus-connect-personal.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Globus Connect Personal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guide4-advanced-features.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#globus-access-and-account-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Globus Access and Account Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-your-guest-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Your Guest Collection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-ongoing-collaborations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing Ongoing Collaborations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-sharing-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Sharing Issues
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collaboration-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collaboration Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-your-collaborators-accessing-shared-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Your Collaborators: Accessing Shared Data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-and-additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support and Additional Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="creating-guest-collections-for-external-collaboration">Creating Guest Collections for External Collaboration</h1>
+<h2 id="summary">Summary</h2>
+<p>This guide provides step-by-step instructions for Smithsonian staff to create <strong>Guest Collections</strong> in Globus, enabling secure data sharing with external collaborators who don't have access to Smithsonian storage systems. Guest Collections act as a bridge, using the data owner's credentials to provide controlled access to specific directories.</p>
+<h3 id="example-use-cases">Example Use Cases</h3>
+<p>Many Smithsonian staff use Globus to share large datasets with external collaborators, particularly those requiring access to files that are too large for email or cloud storage:</p>
+<ul>
+<li>
+<p>A collaborative team at NMNH and STRI uses Globus to transfer pollen images generated on microscopes at NMNH in DC to STRI collaborators in Panama, where they are analyzed and shared with external collaborators who provide taxonomic expertise by annotating the images according to their specialized knowledge of pollen identification.</p>
+</li>
+<li>
+<p>The Center for Conservation Genomics at NZCBI uses Globus to share genomic data externally with research partners around the world.</p>
+</li>
+</ul>
+<h2 id="globus-access-and-account-requirements">Globus Access and Account Requirements</h2>
+<p><strong>TL;DR: Your Smithsonian account gives you access to Globus. To share data, you also need an account on the server where your data lives. When you create a Guest Collection, it uses YOUR server permissions to let external collaborators access your data - they don't need their own server accounts.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Access Type</th>
+<th>What It Provides</th>
+<th>Requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Globus Web Application</strong></td>
+<td>Interface to manage transfers, view activity, browse collections</td>
+<td>Smithsonian network account</td>
+</tr>
+<tr>
+<td><strong>Creating Guest Collections</strong></td>
+<td>Ability to share your data with external collaborators</td>
+<td>Smithsonian network account + user account on the specific server hosting your data</td>
+</tr>
+<tr>
+<td><strong>Accessing Shared Guest Collections</strong></td>
+<td>Read/write data in collections shared with you</td>
+<td>Globus account only (uses collection owner's server permissions)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Important Note:</strong> While you can access the Globus web application interface with just your Smithsonian network account, you need user accounts on the specific storage systems (Hydra, STRI servers, etc.) to view and work with Collections containing data stored on those systems. Without the underlying storage access, Collections will appear as inaccessible in the Globus interface.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<h3 id="for-data-owners-sharing-data">For Data Owners (Sharing Data)</h3>
+<ul>
+<li>[ ] Active Smithsonian network account </li>
+<li>[ ] User account on the server hosting your data:</li>
+<li><strong>Hydra</strong>: <a href="https://smithsonianprod.servicenowservices.com/si?id=sc_cat_item&amp;sys_id=962e05331b96e05078932f41f54bcb3b">Request an HPC account on the SI Service Portal</a></li>
+<li><strong>DAMS NAS Workflows:</strong> SI-Globus@si.edu</li>
+<li><strong>STRI users</strong>: Contact STRIhelp@si.edu to request Globus Data Transfer Node Server access</li>
+<li>[ ] Data organized in a shareable directory structure</li>
+<li>[ ] Evaluate your data's sensitivity (note: PII should never be transferred using Globus)</li>
+</ul>
+<h3 id="for-data-recipients-accessing-shared-data">For Data Recipients (Accessing Shared Data)</h3>
+<ul>
+<li>[ ] Globus account (free institutional or personal account)</li>
+<li>[ ] Valid email address for sharing notifications</li>
+</ul>
+<p><strong>Note</strong>: Recipients do not need accounts on the underlying storage systems. The Guest Collection uses the data owner's permissions to provide limited access.</p>
+<h3 id="where-is-your-data-right-now">Where Is Your Data Right Now?</h3>
+<p>Before creating a Guest Collection, your data must be on Smithsonian institutional storage, not on your personal device.</p>
+<table>
+<thead>
+<tr>
+<th>If your data is...</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Already on Smithsonian storage</strong> (Hydra, STRI servers, DAMS NAS)</td>
+<td>You're ready to proceed with this guide</td>
+</tr>
+<tr>
+<td><strong>On your laptop, workstation, or external hard drive</strong></td>
+<td>First transfer it to institutional storage using <strong>Guide 3: Globus Connect Personal</strong>, then return here</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why this matters:</strong> Smithsonian Data Transfer Nodes are optimized for high-bandwidth transfers. Sharing directly from a personal device would tie up your machine for the duration of every collaborator's download and severely limit transfer speeds. By hosting data on institutional storage, your collaborators get fast downloads and you can close your laptop.</p>
+<h3 id="network-requirements">Network Requirements</h3>
+<p>Once data is deposited in a Smithsonian-managed collection, all Globus actions can be managed from the web application (app.globus.org) without being required to be on the Smithsonian network or VPN.</p>
+<h2 id="creating-your-guest-collection">Creating Your Guest Collection</h2>
+<p>Think of a Guest Collection as creating a secure "window" into your data. You maintain full control over what's shared and who can access it, while your collaborators can use their existing Globus accounts to access, download, or even upload files to your shared space.</p>
+<h3 id="step-1-locate-your-data">Step 1: Locate Your Data</h3>
+<p><img src="images/sharing-1.png" width="700"></p>
+<p><em>Access your SI collection through the File Manager interface. Note the "for_sharing" folder selection.</em></p>
+<p>Log into the Globus web interface and navigate to the File Manager. Search for the collection where your data are housed - for example, "SI_hydra_scratch" shown in the interface. Browse to find the directory containing the data you want to share.</p>
+<p>The key decision here is choosing the right directory level. You can share an entire project folder or drill down to specific subdirectories. Consider what your collaborators actually need access to - sharing at too high a level might expose data they don't need to see, while sharing too narrowly might require creating multiple Guest Collections later.</p>
+<h3 id="step-2-initiate-guest-collection-creation">Step 2: Initiate Guest Collection Creation</h3>
+<p><img src="images/sharing-2.png" width="700"></p>
+<p><em>Select the folder you want to share (blue highlighting shows selection) and click the Share button from the action menu on the right.</em></p>
+<p>Once you've located the directory to share, select it using the checkbox. You'll see it highlighted in blue. Click the "Share" button from the action menu on the right side of the interface.</p>
+<p>From the sharing options, select "Add Guest Collection." This creates a new access point that external users can connect to, separate from your main Smithsonian collection. Think of this as creating a dedicated "front door" for your collaborators that only opens to the specific data you want to share.</p>
+<p><img src="images/sharing-2-2.png" width="700"></p>
+<p><em>Alternative method: From the collection overview, click 'Add Guest Collection' to begin sharing process.</em></p>
+<h3 id="step-3-configure-collection-identity">Step 3: Configure Collection Identity</h3>
+<p><img src="images/sharing-3.png" width="700"></p>
+<p><em>Configure your guest collection with descriptive information and security settings.</em></p>
+<p>When creating the Guest Collection, you'll configure several important settings:</p>
+<p><strong>Display Name</strong>: Choose something descriptive. "DemoGuest" works for testing, but for real collaborations, use names like "PollenAnalysisProject2025" or "GenomicsData_SmithLab." Your collaborators will see this name, and it helps them understand what they're accessing.</p>
+<p><strong>Description</strong>: Explain what the data contains, any important usage guidelines, and perhaps how it relates to your collaboration. For example: "High-resolution pollen microscopy images from Costa Rica field sites. Please download images, add taxonomic annotations to the provided spreadsheet, and return completed annotations via email."</p>
+<p><strong>Directory Path</strong>: This confirms exactly which directory you're sharing. Double-check this carefully - you can restrict access further later, but you can't expand beyond what you select here without creating a new Guest Collection.</p>
+<p><strong>Keywords</strong>: Add searchable terms that help with discoverability if you're managing multiple Guest Collections. Terms like your project name, institution names, or data types work well.</p>
+<p>Click "Create Collection" to establish the new endpoint.</p>
+<h3 id="step-4-add-your-collaborators">Step 4: Add Your Collaborators</h3>
+<p><img src="images/sharing-4.png" width="700"></p>
+<p><em>Access permission management from your newly created guest collection using the "Add Permissions — Share With" button.</em></p>
+<p>Now comes the crucial step of defining who can access your data and what they can do with it. Click "Add Permissions — Share With" to begin configuring access.</p>
+<p><strong>Choosing Your Sharing Scope:</strong></p>
+<p>Most research collaborations use "User" sharing, where you specify individuals by their email addresses or institutional identifiers. This gives you precise control over who has access.</p>
+<p>"Group" sharing works well if your collaborator's institution has pre-defined research groups in Globus, but this is less common for external collaborations.</p>
+<p>Do not select "All Users" or "Public".</p>
+<p><img src="images/sharing-5.png" width="700"></p>
+<p><em>Configure basic user permissions for root directory access. Note the "user" button selection, Email Notification checkbox, and "Add Permission" button.</em></p>
+<p><strong>Configuring User Permissions:</strong></p>
+<p>For each collaborator, you can specify several settings:</p>
+<p><strong>Path Access</strong>: The default is "/" which gives access to everything in your Guest Collection. However, you can restrict access to specific subdirectories. For example, if your Guest Collection contains both raw data and preliminary analysis, you might give collaborators access only to "/rawdata/" initially, then later grant access to "/analysis/" as the project progresses.</p>
+<p><strong>Read vs. Write Permissions</strong>: 
+- <strong>Read</strong>: Allows downloading and viewing files. This is appropriate when you're sharing datasets for analysis.
+- <strong>Write</strong>: Allows uploading, modifying, and deleting files. DO NOT ENABLE WRITE ACCESS. </p>
+<p><strong>Email Notifications</strong>: Enable this and customize the message if desired. Your collaborators will receive an email with instructions on how to access the shared data.</p>
+<p><strong>Advanced Access Control:</strong></p>
+<p>For enhanced customization, you can limit access to specific subdirectories by changing the Path field from <code>/</code> to <code>/subdir1/</code> or other specific paths. This is particularly useful when your Guest Collection contains multiple types of data but you only want to share specific portions with certain collaborators.</p>
+<h2 id="managing-ongoing-collaborations">Managing Ongoing Collaborations</h2>
+<h3 id="monitoring-collection-usage">Monitoring Collection Usage</h3>
+<p>The Activity section shows you what's happening with your shared data - who's downloading what, when transfers occur, and if there are any access problems. This is valuable for understanding how actively your collaboration is proceeding and for troubleshooting if collaborators report problems.</p>
+<h3 id="lifecycle-management">Lifecycle Management</h3>
+<p>Research collaborations have natural endpoints. When a project concludes, or when certain collaborators no longer need access, remove their permissions through the Permissions tab. This isn't just good security practice - it also helps keep your Guest Collection organized and ensures you're only supporting active collaborations.</p>
+<h2 id="troubleshooting-sharing-issues">Troubleshooting Sharing Issues</h2>
+<h3 id="access-problems">Access Problems</h3>
+<p><strong>Issue: "Access Denied" when accessing shared collection</strong></p>
+<p><img src="images/sharing-5.png" width="700"></p>
+<p><em>Verify that read permissions are enabled (checkboxes) and that the collaborator has been properly notified.</em></p>
+<ul>
+<li><strong>Cause</strong>: Permission not properly configured in Guest Collection, or data owner lacks sufficient permissions on underlying storage</li>
+<li><strong>Solution</strong>: Verify permission settings in Guest Collection; ensure data owner has appropriate access to shared directories</li>
+<li><strong>Prevention</strong>: Test Guest Collection access with known collaborators; verify data owner permissions before sharing</li>
+</ul>
+<p><strong>Issue: Collection not visible to collaborator</strong>
+- <strong>Cause</strong>: Permission not properly configured or email notification not received
+- <strong>Solution</strong>: Re-send invitation through permission management; verify user identity
+- <strong>Prevention</strong>: Always enable email notifications; test sharing with known users first</p>
+<h2 id="collaboration-best-practices">Collaboration Best Practices</h2>
+<h3 id="data-organization">Data Organization</h3>
+<ul>
+<li><strong>Share Only What's Necessary</strong>: Limit access to specific directories required for collaboration rather than providing broad access</li>
+<li><strong>Clear Directory Structure</strong>: Use intuitive folder hierarchies like shown in the file listings</li>
+<li><strong>Access Boundaries</strong>: Use path restrictions to prevent unnecessary directory access</li>
+</ul>
+<h3 id="security-considerations">Security Considerations</h3>
+<ul>
+<li><strong>Principle of Least Privilege</strong>: Grant minimum required access</li>
+<li><strong>Review Collaborator Access</strong>: Remove permissions when no longer needed</li>
+<li><strong>Data Sensitivity</strong>: Do not share personally identifiable information (PII) or any export controlled data with Globus</li>
+</ul>
+<h3 id="using-globus-for-internal-smithsonian-collaboration">Using Globus for Internal Smithsonian Collaboration</h3>
+<p>While this guide focuses on external collaboration, these same tools and techniques can be used effectively for sharing data between Smithsonian departments, research units, centers, and institutes. Internal collaborations may have simplified account management since all parties already have Smithsonian network access, but the same principles of organized sharing, clear permissions, and proper access management apply.</p>
+<h2 id="for-your-collaborators-accessing-shared-data">For Your Collaborators: Accessing Shared Data</h2>
+<p><em>Share this section with external collaborators who receive your Guest Collection invitation.</em></p>
+<hr />
+<p>When a Smithsonian staff member shares data with you through Globus, you'll receive an email notification with a link to access the shared files. Here's how to get started:</p>
+<h3 id="step-1-create-a-globus-account-if-you-dont-have-one">Step 1: Create a Globus Account (If You Don't Have One)</h3>
+<p>If you've never used Globus before:</p>
+<ol>
+<li>Go to <a href="https://app.globus.org">app.globus.org</a></li>
+<li>Look for your institution in the organization dropdown—many universities and research institutions are already connected</li>
+<li>If your institution isn't listed, click "Sign in with Google" or "Sign in with ORCID iD" to create a free account</li>
+<li>Complete the brief registration process</li>
+</ol>
+<p>If you already have a Globus account through your institution or a previous collaboration, simply log in with those credentials.</p>
+<h3 id="step-2-access-the-shared-collection">Step 2: Access the Shared Collection</h3>
+<ol>
+<li>Click the link in the email invitation you received, OR</li>
+<li>Log into <a href="https://app.globus.org">app.globus.org</a>, go to <strong>File Manager</strong>, and search for the collection name provided by your collaborator</li>
+</ol>
+<p>You should see the shared files and folders. If you see "Access Denied," contact the person who shared the data—they may need to verify your permissions.</p>
+<h3 id="step-3-download-the-data">Step 3: Download the Data</h3>
+<p><strong>Option A: Download to your computer (small files)</strong></p>
+<p>For files under a few gigabytes, you can download directly through your browser:
+1. Select the files you want
+2. Click <strong>Download</strong> in the right-hand menu</p>
+<p><strong>Option B: Transfer to your institution's storage (large files)</strong></p>
+<p>For larger datasets, transfer server-to-server for faster, more reliable results:
+1. In File Manager, enable the two-panel view (click <strong>Panels</strong> in the top right)
+2. The shared collection should be in one panel
+3. In the other panel, search for your institution's Globus collection
+4. Select files in the shared collection, then click <strong>Start</strong> to transfer</p>
+<p><strong>Option C: Transfer to your personal computer</strong></p>
+<p>If you need large files on your laptop or workstation:
+1. Install <strong>Globus Connect Personal</strong> from <a href="https://www.globus.org/globus-connect-personal">globus.org/globus-connect-personal</a>
+2. This creates a collection on your personal device
+3. Transfer from the shared collection to your personal collection</p>
+<h3 id="need-help">Need Help?</h3>
+<p>If you have trouble accessing shared data, contact the Smithsonian staff member who sent the invitation. They can verify your permissions and resend the invitation if needed.</p>
+<p>For general Globus questions, visit <a href="https://docs.globus.org">docs.globus.org</a> or contact your institution's research computing support.</p>
+<hr />
+<p><em>End of external collaborator instructions section.</em></p>
+<h2 id="support-and-additional-resources">Support and Additional Resources</h2>
+<h3 id="smithsonian-support-contacts">Smithsonian Support Contacts</h3>
+<ul>
+<li><strong>General Globus Support:</strong> SI-Globus@si.edu</li>
+<li><strong>Hydra HPC Support:</strong> SI-HPC@si.edu</li>
+<li><strong>DAMS NAS Workflows:</strong> SI-Globus@si.edu</li>
+<li><strong>STRI Data Transfer Server:</strong> STRIhelp@si.edu</li>
+</ul>
+<p><strong>Globus Documentation</strong>: Comprehensive platform <a href="https://docs.globus.org/">guides and tutorials</a></p>
+<hr />
+<p><em>For technical support with Globus collections and data access, contact SI-Globus@si.edu. For questions about account creation or specific systems access, contact the appropriate system administrators listed above.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="https://www.si.edu">Smithsonian Institution</a> · <a href="https://www.si.edu/privacy">Privacy</a> · <a href="https://www.si.edu/termsofuse">Terms of Use</a>
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

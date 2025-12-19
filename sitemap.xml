@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://smithsonian.github.io/globus-docs/index.html</loc>
+         <lastmod>2025-12-19</lastmod>
+    </url>
+    <url>
+         <loc>https://smithsonian.github.io/globus-docs/guide1-globus-basics.html</loc>
+         <lastmod>2025-12-19</lastmod>
+    </url>
+    <url>
+         <loc>https://smithsonian.github.io/globus-docs/guide2-sharing-data.html</loc>
+         <lastmod>2025-12-19</lastmod>
+    </url>
+    <url>
+         <loc>https://smithsonian.github.io/globus-docs/guide3-globus-connect-personal.html</loc>
+         <lastmod>2025-12-19</lastmod>
+    </url>
+    <url>
+         <loc>https://smithsonian.github.io/globus-docs/guide4-advanced-features.html</loc>
+         <lastmod>2025-12-19</lastmod>
+    </url>
+</urlset>

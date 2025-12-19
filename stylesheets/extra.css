@@ -1,0 +1,478 @@
+/* ===========================================
+   ODI Brand Colors
+   =========================================== */
+:root {
+  /* Primary Colors */
+  --odi-dark-green: #03523E;
+  --odi-light-green: #08A279;
+  --odi-light-blue: #80CCCD;
+  --odi-dark-blue: #00869F;
+  
+  /* Accent Colors */
+  --odi-red: #EA4924;
+  --odi-orange: #F08343;
+  --odi-yellow: #F8AD40;
+  --odi-purple: #76345B;
+  
+  /* Apply to Material theme */
+  --md-primary-fg-color: #00869F;
+  --md-primary-fg-color--light: #80CCCD;
+  --md-primary-fg-color--dark: #006577;
+  --md-accent-fg-color: #08A279;
+  --md-typeset-a-color: #00869F;
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #08A279;
+  --md-accent-fg-color: #80CCCD;
+  --md-typeset-a-color: #80CCCD;
+}
+
+/* ===========================================
+   Header & Navigation
+   =========================================== */
+.md-header {
+  background-color: var(--odi-dark-blue);
+}
+
+.md-header__button.md-logo {
+  padding: 0;
+}
+
+.md-header__button.md-logo img {
+  height: 32px;
+  width: auto;
+}
+
+.md-tabs {
+  background-color: var(--odi-dark-blue);
+}
+
+/* ===========================================
+   Links
+   =========================================== */
+.md-typeset a {
+  color: var(--odi-dark-blue);
+}
+
+.md-typeset a:hover {
+  color: var(--odi-light-green);
+}
+
+/* ===========================================
+   Buttons
+   =========================================== */
+.md-typeset .md-button {
+  background-color: var(--odi-dark-blue);
+  border-color: var(--odi-dark-blue);
+  color: white;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.md-typeset .md-button:hover {
+  background-color: var(--odi-light-green);
+  border-color: var(--odi-light-green);
+}
+
+.md-typeset .md-button--primary {
+  background-color: var(--odi-dark-blue);
+  border-color: var(--odi-dark-blue);
+}
+
+/* ===========================================
+   Card Grid
+   =========================================== */
+.md-typeset .grid.cards > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.md-typeset .grid.cards > ul > li {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  background: white;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--odi-light-green);
+  box-shadow: 0 4px 12px rgba(0, 134, 159, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Make entire card clickable via stretched link */
+.md-typeset .grid.cards > ul > li a {
+  position: static;
+}
+
+.md-typeset .grid.cards > ul > li > p:last-of-type a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li {
+  background: var(--md-default-bg-color);
+  border-color: var(--md-default-fg-color--lightest);
+}
+
+/* Card header - icon and title alignment */
+.md-typeset .grid.cards > ul > li > p:first-child {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 2.5rem;
+  margin-bottom: 0;
+}
+
+.md-typeset .grid.cards > ul > li > p:first-child .twemoji,
+.md-typeset .grid.cards > ul > li > p:first-child svg {
+  flex-shrink: 0;
+}
+
+/* Four cards per row on desktop */
+@media (min-width: 900px) {
+  .md-typeset .grid.cards > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Icon colors in cards */
+.md-typeset .grid.cards .twemoji,
+.md-typeset .grid.cards .emojione,
+.md-typeset .grid.cards svg {
+  color: var(--odi-dark-blue);
+}
+
+/* Larger icons in cards */
+.md-typeset .grid.cards .lg {
+  font-size: 2rem;
+  color: var(--odi-dark-blue);
+}
+
+/* ===========================================
+   Admonitions with ODI Colors
+   =========================================== */
+.md-typeset .admonition.note,
+.md-typeset details.note {
+  border-color: var(--odi-dark-blue);
+}
+
+.md-typeset .note > .admonition-title,
+.md-typeset .note > summary {
+  background-color: rgba(0, 134, 159, 0.1);
+}
+
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-color: var(--odi-light-green);
+}
+
+.md-typeset .tip > .admonition-title,
+.md-typeset .tip > summary {
+  background-color: rgba(8, 162, 121, 0.1);
+}
+
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+  border-color: var(--odi-orange);
+}
+
+.md-typeset .warning > .admonition-title,
+.md-typeset .warning > summary {
+  background-color: rgba(240, 131, 67, 0.1);
+}
+
+/* ===========================================
+   Tables
+   =========================================== */
+.md-typeset table:not([class]) {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  display: inline-table;
+  width: 100%;
+  min-width: unset;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--odi-dark-blue);
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border: none;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-bottom: 1px solid #eee;
+}
+
+.md-typeset table:not([class]) tr:last-child td {
+  border-bottom: none;
+}
+
+.md-typeset table:not([class]) tbody tr:hover {
+  background-color: rgba(8, 162, 121, 0.05);
+}
+
+/* Zebra striping */
+.md-typeset table:not([class]) tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.md-typeset table:not([class]) tbody tr:nth-child(even):hover {
+  background-color: rgba(8, 162, 121, 0.08);
+}
+
+/* ===========================================
+   Footer
+   =========================================== */
+.md-footer {
+  background-color: var(--odi-dark-blue);
+}
+
+/* ===========================================
+   Search
+   =========================================== */
+.md-search__input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===========================================
+   Code Blocks
+   =========================================== */
+.md-typeset code {
+  background-color: rgba(128, 204, 205, 0.15);
+  color: var(--odi-dark-blue);
+}
+
+/* ===========================================
+   Horizontal Rules
+   =========================================== */
+.md-typeset hr {
+  border-color: var(--odi-light-blue);
+}
+
+/* ===========================================
+   Mermaid Diagrams
+   =========================================== */
+.mermaid {
+  background: transparent;
+}
+
+/* ===========================================
+   Typography
+   =========================================== */
+.subtitle {
+  font-size: 1.3rem;
+  color: #666;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Section headers with underline */
+.md-typeset h2 {
+  border-bottom: 2px solid var(--odi-light-blue);
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+/* ===========================================
+   Page Layout
+   =========================================== */
+/* Center the content with reasonable max-width */
+.md-content__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Hide TOC on home page */
+.md-sidebar--secondary {
+  display: none;
+}
+
+/* Full-width content on home page */
+.md-content {
+  max-width: 100%;
+}
+
+/* ===========================================
+   Hero Section
+   =========================================== */
+.hero {
+  background: linear-gradient(135deg, #f0f9fa 0%, #e4f3f5 100%);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--odi-dark-blue);
+  text-align: center;
+}
+
+.hero h1 {
+  margin-top: 0;
+  color: var(--odi-dark-blue);
+}
+
+.hero p {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero p.hero-subtitle {
+  text-align: center !important;
+  font-weight: 700 !important;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.hero p.hero-description {
+  text-align: left !important;
+}
+
+.hero p.hero-description,
+.hero p.hero-cta,
+.hero ol.hero-toc {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left !important;
+}
+
+.hero p.hero-cta {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero ol.hero-toc {
+  padding-left: 0;
+  list-style-position: inside;
+  font-size: 0.95rem;
+  color: #444;
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero ol.hero-toc li {
+  margin-bottom: 0.1rem;
+  line-height: 1.4;
+}
+
+/* Hero buttons side by side, centered */
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.hero-buttons .md-button {
+  min-width: 200px;
+  text-align: center;
+}
+
+/* Cards inside hero */
+.hero .grid.cards {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.hero .grid.cards > ul > li {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+[data-md-color-scheme="slate"] .hero {
+  background: linear-gradient(135deg, #1e1e1e 0%, #1e2d30 100%);
+}
+
+/* ===========================================
+   Quick Reference Section
+   =========================================== */
+.quick-ref-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1rem 0;
+  align-items: start;
+}
+
+.quick-ref-box {
+  background: #f0f9fa;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #d0e8eb;
+  height: 100%;
+}
+
+.quick-ref-box h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: var(--odi-dark-blue);
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.quick-ref-box ul {
+  margin: 0.75rem 0 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.quick-ref-box li {
+  margin-bottom: 0.5rem;
+  padding-left: 0;
+}
+
+.quick-ref-box li::before {
+  content: none;
+}
+
+/* Dark mode support for quick-ref boxes */
+[data-md-color-scheme="slate"] .quick-ref-box {
+  background: var(--md-default-bg-color);
+  border-color: var(--md-default-fg-color--lightest);
+}
+
+/* ===========================================
+   Legacy Layout Classes (kept for compatibility)
+   =========================================== */
+/* Two-column layout for tables */
+.table-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Footer buttons centered */
+.button-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
