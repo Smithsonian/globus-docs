@@ -1,6 +1,6 @@
 # Globus Basics and File Transfers
 
-## Executive Summary
+## Summary
 
 This guide introduces Smithsonian staff to Globus, a secure platform for transferring large datasets between storage systems. You'll learn how to log in with your Smithsonian credentials, navigate the web interface, transfer files between collections, and monitor your transfer activity. This foundational guide prepares you for more advanced Globus capabilities covered in our companion guides.
 

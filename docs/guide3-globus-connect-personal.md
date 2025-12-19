@@ -1,6 +1,6 @@
 # Globus Connect Personal
 
-## Executive Summary
+## Summary
 
 This guide shows Smithsonian staff how to install and configure **Globus Connect Personal**, a lightweight application that turns your laptop, workstation, or external hard drive into a Globus collection. Once set up, you can transfer files directly between your personal device and Smithsonian storage systems. This workflow is ideal for uploading fieldwork data, migrating archival collections, syncing project outputs, or backing up local files to institutional storage.
 

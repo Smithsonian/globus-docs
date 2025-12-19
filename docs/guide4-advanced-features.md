@@ -1,6 +1,6 @@
 # Advanced Globus Features
 
-## Executive Summary
+## Summary
 
 This guide covers Globus power-user features that automate and optimize data workflows. You'll learn when to use **Sync** instead of Transfer, how to schedule **recurring transfers**, and how to build **Globus Flows** for multi-step automated workflows. These capabilities transform Globus from a manual file-copying tool into an automated data pipeline.
 
