@@ -78,4 +78,4 @@ What are you trying to do?
 
 ---
 
-*These guides are maintained by ODI's Chief Data and AI Office. Last updated: 12/19/25. For corrections or suggestions, contact SI-Globus@si.edu or submit an issue in this repository.*
+*These guides are maintained by ODI's Chief Data and AI Office. Last updated: 01/06/26. For corrections or suggestions, contact SI-Globus@si.edu or submit an issue in this repository.*
