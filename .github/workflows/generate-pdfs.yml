@@ -100,4 +100,5 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add docs/pdfs/*.pdf
           git diff --staged --quiet || git commit -m "Auto-generate PDFs from Markdown [skip ci]"
+          git pull --rebase
           git push
