@@ -14,7 +14,7 @@ Smithsonian maintains dedicated **Globus Data Transfer Nodes** at several locati
 
 - **Smithsonian Data Center** — Includes access to Hydra (high-performance computing cluster) storage, DAMS NAS storage, and certain unit managed network drives
 - **STRI** (Smithsonian Tropical Research Institute) — For tropical research data workflows  
-- **SAO** (Smithsonian Astrophysical Observatory) — For astrophysical research data
+- **SAO** (Smithsonian Astrophysical Observatory) *currently in testing* — For astrophysical research data 
 
 These institutional endpoints allow you to move data between Smithsonian systems and collaborate with partners worldwide.
 
